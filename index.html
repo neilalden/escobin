@@ -71,18 +71,18 @@
 				<div id="about-me">
 					<div>
 						<p style="font-weight: bold">About me</p>
-						<p>
+						<p style="margin: 5px">
 							I'd describe myself as a persistent learner, <br />who's
 							motivation is building interesting stuff
 						</p>
 					</div>
 					<div>
-						<div class="container">
+						<div class="container card">
 							<p style="font-weight: bold; margin-top: 10px">
 								Technologies I--
 							</p>
 							<div class="lang">
-								<div class="card">
+								<div class="card-body">
 									<p>usually use and comfortable with</p>
 									<ul>
 										<li><i class="fab fa-html5"></i></li>
@@ -112,7 +112,7 @@
 								</div>
 							</div>
 							<div class="lang">
-								<div class="card">
+								<div class="card-body">
 									<p>have used but not very confident with</p>
 									<ul>
 										<li>
@@ -149,7 +149,7 @@
 								</div>
 							</div>
 							<div class="lang">
-								<div class="card">
+								<div class="card-body">
 									<p>want to learn and use in the future</p>
 									<ul>
 										<li>
@@ -173,7 +173,10 @@
 								</div>
 							</div>
 						</div>
-						<p>I also took online courses in my free time</p>
+						<p style="font-weight: bold">
+							I'm a 3rd year cs major and also took online courses in my free
+							time
+						</p>
 						<ul class="cert">
 							<li>
 								<a
@@ -196,15 +199,91 @@
 					<button id="my-profile-btn" class="profile-btn">back</button>
 				</div>
 			</section>
-			<section id="section1"></section>
-			<section id="section2"></section>
+			<section id="section1">
+				<div class="project-card" id="project1">
+					<video
+						src="src/color-flikker.mp4"
+						id="color-flikker-vid"
+						autoplay
+						muted
+						loop
+					></video>
+					<div class="project-card-layer" id="color-flikker-about">
+						<p>color flikker</p>
+						<h4>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+							laborum velit, provident minus distinctio exercitationem! Eligendi
+							labore vel ipsa minima aliquid quibusdam impedit quaerat adipisci
+							dignissimos saepe expedita vero, repellat tenetur similique ab.
+							Enim dolore voluptatum aspernatur accusamus cum? Officiis velit
+							ipsa cum dignissimos eveniet libero illo quisquam eos itaque?
+						</h4>
+						<button id="color-flikker-back" class="profile-btn">back</button>
+					</div>
+				</div>
+				<div class="project-card" id="project2">
+					<video
+						src="src/sort-visualizer.mp4"
+						id="sort-visualizer-vid"
+						autoplay
+						muted
+						loop
+					></video>
+					<div class="project-card-layer" id="sort-visualizer-about">
+						<p>sort-visualizer</p>
+						<h4>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+							laborum velit, provident minus distinctio exercitationem! Eligendi
+							labore vel ipsa minima aliquid quibusdam impedit quaerat adipisci
+							dignissimos saepe expedita vero, repellat tenetur similique ab.
+							Enim dolore voluptatum aspernatur accusamus cum? Officiis velit
+							ipsa cum dignissimos eveniet libero illo quisquam eos itaque?
+						</h4>
+						<button id="sort-visualizer-back" class="profile-btn">back</button>
+					</div>
+				</div>
+			</section>
+			<section id="section2">
+				<div class="project-card" id="project3">
+					<video
+						src="src/contact-tracing.mp4"
+						id="contact-tracing-vid"
+						autoplay
+						muted
+						loop
+					></video>
+					<div class="project-card-layer" id="contact-tracing-about">
+						<p>contact tracing</p>
+						<h4>
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus
+							laborum velit, provident minus distinctio exercitationem! Eligendi
+							labore vel ipsa minima aliquid quibusdam impedit quaerat adipisci
+							dignissimos saepe expedita vero, repellat tenetur similique ab.
+							Enim dolore voluptatum aspernatur accusamus cum? Officiis velit
+							ipsa cum dignissimos eveniet libero illo quisquam eos itaque?
+						</h4>
+						<button id="contact-tracing-back" class="profile-btn">back</button>
+					</div>
+				</div>
+				<div class="project-card" id="project4">
+					<div class="project-card-layer">
+						<p>hey bestie</p>
+					</div>
+				</div>
+			</section>
 		</div>
 	</body>
 	<script>
 		const aboutMe = document.getElementById("about-me");
 		const myProfile = document.getElementById("my-profile");
+		const colorFlikkerAbout = document.getElementById("color-flikker-about");
+		const colorFlikkerVid = document.getElementById("color-flikker-vid");
 		const aboutMeBtn = document.getElementById("about-me-btn");
 		const myProfileBtn = document.getElementById("my-profile-btn");
+		const colorFlikkerAboutBtn = document.getElementById(
+			"color-flikker-about-btn"
+		);
+		const colorFlikkerBack = document.getElementById("color-flikker-back");
 		aboutMeBtn.addEventListener("click", () => {
 			aboutMe.setAttribute("style", "display:block");
 			myProfile.setAttribute("style", "display:none");
@@ -212,6 +291,14 @@
 		myProfileBtn.addEventListener("click", () => {
 			aboutMe.setAttribute("style", "display:none");
 			myProfile.setAttribute("style", "display:block");
+		});
+		colorFlikkerAboutBtn.addEventListener("click", () => {
+			colorFlikkerAbout.setAttribute("style", "display:block; background:#fff");
+			colorFlikkerVid.setAttribute("style", "display:none");
+		});
+		colorFlikkerBack.addEventListener("click", () => {
+			colorFlikkerAbout.setAttribute("style", "display:none");
+			colorFlikkerVid.setAttribute("style", "display:block");
 		});
 	</script>
 </html>

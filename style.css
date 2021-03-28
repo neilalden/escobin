@@ -13,7 +13,7 @@ body {
 	height: 100%;
 	max-width: 1280px;
 	max-height: 720px;
-	min-height: 100vh;
+	min-height: 100vh !important;
 	display: flex;
 	flex-direction: row;
 	/* vertical and horizontal center */
@@ -25,14 +25,22 @@ body {
 	transform: translate(-50%, -50%); */
 }
 section {
-	width: 33%;
-	height: 95%;
-	min-height: 95vh;
-	max-height: 95vh;
+	height: 95vh !important;
+	min-height: 95vh !important;
 	margin: auto;
-	background: #fff;
 	border-radius: 5px;
 	text-align: center;
+	overflow: hidden;
+}
+#section0 {
+	background: #fff;
+	width: 25%;
+}
+#section1 {
+	width: 37%;
+}
+#section2 {
+	width: 37%;
 }
 ul {
 	list-style: none;
@@ -61,6 +69,18 @@ a i:hover {
 #my-profile,
 #about-me {
 	margin: 25% auto;
+}
+.btn {
+	margin: 2px auto;
+	cursor: pointer;
+	font-family: monospace;
+	font-size: 14px;
+	background-color: #000;
+	color: #fff !important;
+	border: none;
+	border-radius: 15px;
+	outline: none;
+	padding: 3px;
 }
 .profile-btn {
 	margin: 10% auto;
@@ -103,21 +123,55 @@ a i:hover {
 }
 .card {
 	border-radius: 5px;
-	border: 1px solid #ccc;
 	width: 95%;
-	margin: 5px auto;
+	margin: 10% auto;
 }
-.card-title {
-	border-bottom: 1px solid #ccc;
+.card-body {
+	border-bottom: #ccc 1px solid;
+}
+.project-card {
+	height: 50%;
+	border-radius: 5px;
+	margin: auto;
+	overflow: hidden;
+	background-color: #fff !important;
+}
+.project-card-layer {
+	height: 100%;
+	width: 100%;
+	display: none;
+}
+video {
+	width: 100% !important;
+	/* height: 100% !important; */
+}
+/* .project-card:hover video {
+	display: none !important;
+}
+.project-card:hover .project-card-layer {
+	display: block !important;
+} */
+#project1 {
+	margin-bottom: 1%;
+}
+#project2 {
+	margin-top: 1%;
+}
+#project3 {
+	margin-bottom: 1%;
+}
+#project4 {
+	margin-top: 1%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 	.main {
 		flex-direction: column;
+		max-height: none;
 	}
 	section {
-		width: 95%;
-		height: 95%;
+		width: 95vw !important;
+		height: 95vh !important;
 		margin: 5px auto;
 	}
 }
