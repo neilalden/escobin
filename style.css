@@ -34,13 +34,13 @@ section {
 }
 #section0 {
 	background: #fff;
-	width: 25%;
+	width: 29%;
 }
 #section1 {
-	width: 37%;
+	width: 35%;
 }
 #section2 {
-	width: 37%;
+	width: 35%;
 }
 ul {
 	list-style: none;
@@ -60,7 +60,7 @@ span {
 }
 a:hover,
 a i:hover {
-	transition: 0.2s ease-in-out;
+	transition: 0.15s ease-in-out;
 	color: #ccc !important;
 }
 #about-me {
@@ -70,17 +70,20 @@ a i:hover {
 #about-me {
 	margin: 25% auto;
 }
-.btn {
-	margin: 2px auto;
+.link {
+	margin: 4px auto;
 	cursor: pointer;
 	font-family: monospace;
 	font-size: 14px;
-	background-color: #000;
-	color: #fff !important;
+	background-color: transparent;
+	color: #000;
 	border: none;
-	border-radius: 15px;
 	outline: none;
-	padding: 3px;
+	text-decoration: underline;
+}
+.link:hover {
+	transition: 0.15s ease-in-out;
+	color: #ccc !important;
 }
 .profile-btn {
 	margin: 10% auto;
@@ -127,7 +130,7 @@ a i:hover {
 	margin: 10% auto;
 }
 .card-body {
-	border-bottom: #ccc 1px solid;
+	border-bottom: #000 2px solid;
 }
 .project-card {
 	height: 50%;
@@ -154,14 +157,8 @@ video {
 #project1 {
 	margin-bottom: 1%;
 }
-#project2 {
-	margin-top: 1%;
-}
 #project3 {
 	margin-bottom: 1%;
-}
-#project4 {
-	margin-top: 1%;
 }
 
 @media only screen and (max-width: 800px) {
@@ -173,5 +170,9 @@ video {
 		width: 95vw !important;
 		height: 95vh !important;
 		margin: 5px auto;
+	}
+	video {
+		width: 100% !important;
+		height: 300px !important;
 	}
 }

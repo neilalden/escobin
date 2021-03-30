@@ -10,6 +10,7 @@
 			integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
 			crossorigin="anonymous"
 		/>
+		<link href="https://vjs.zencdn.net/7.11.4/video-js.css" rel="stylesheet" />
 		<link rel="stylesheet" href="style.css" />
 		<title>Escobin</title>
 	</head>
@@ -77,6 +78,36 @@
 						</p>
 					</div>
 					<div>
+						<hr
+							style="
+								background-color: #000;
+								height: 2px;
+								border: none;
+								margin: 10px;
+							"
+						/>
+						<p>
+							I'm a 3rd year cs major and also took online courses in my free
+							time
+						</p>
+						<ul class="cert">
+							<li>
+								<a
+									href="https://www.freecodecamp.org/certification/escobin/responsive-web-design"
+									target="_blank"
+									rel="noopener noreferrer"
+									>Responsive Web Design</a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.freecodecamp.org/certification/escobin/javascript-algorithms-and-data-structures"
+									target="_blank"
+									rel="noopener noreferrer"
+									>JavaScript Algorithms and Data Structures</a
+								>
+							</li>
+						</ul>
 						<div class="container card">
 							<p style="font-weight: bold; margin-top: 10px">
 								Technologies I--
@@ -173,41 +204,18 @@
 								</div>
 							</div>
 						</div>
-						<p style="font-weight: bold">
-							I'm a 3rd year cs major and also took online courses in my free
-							time
-						</p>
-						<ul class="cert">
-							<li>
-								<a
-									href="https://www.freecodecamp.org/certification/escobin/responsive-web-design"
-									target="_blank"
-									rel="noopener noreferrer"
-									>Responsive Web Design</a
-								>
-							</li>
-							<li>
-								<a
-									href="https://www.freecodecamp.org/certification/escobin/javascript-algorithms-and-data-structures"
-									target="_blank"
-									rel="noopener noreferrer"
-									>JavaScript Algorithms and Data Structures</a
-								>
-							</li>
-						</ul>
 					</div>
 					<button id="my-profile-btn" class="profile-btn">back</button>
 				</div>
 			</section>
 			<section id="section1">
 				<div class="project-card" id="project1">
-					<video
-						src="src/color-flikker.mp4"
-						id="color-flikker-vid"
-						autoplay
-						muted
-						loop
-					></video>
+					<div id="color-flikker-vid">
+						<video src="src/color-flikker.mp4" muted loop controls></video>
+						<button class="link" id="color-flikker-about-btn">
+							about color flikker
+						</button>
+					</div>
 					<div class="project-card-layer" id="color-flikker-about">
 						<p>color flikker</p>
 						<h4>
@@ -225,9 +233,9 @@
 					<video
 						src="src/sort-visualizer.mp4"
 						id="sort-visualizer-vid"
-						autoplay
 						muted
 						loop
+						controls
 					></video>
 					<div class="project-card-layer" id="sort-visualizer-about">
 						<p>sort-visualizer</p>
@@ -248,9 +256,9 @@
 					<video
 						src="src/contact-tracing.mp4"
 						id="contact-tracing-vid"
-						autoplay
 						muted
 						loop
+						controls
 					></video>
 					<div class="project-card-layer" id="contact-tracing-about">
 						<p>contact tracing</p>
